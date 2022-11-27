@@ -18,6 +18,14 @@ a:hover {
     cursor: pointer;
 }
 
+nav a:hover, nav a.active{
+    color: #F3976C !important;
+}
+
+nav a.active{
+    border-bottom: 2px solid #F3976C !important;
+}
+
 #page-loading-blocs-notifaction {
     position: fixed;
     top: 0;
@@ -42,6 +50,12 @@ a:hover {
 .bloc .container {
     padding-left: 0;
     padding-right: 0;
+    position: relative;
+    z-index: 1;
+}
+
+.bloc .container h2{
+    font-size: 24px;
 }
 
 .bloc-lg {
@@ -155,6 +169,10 @@ a:hover {
 
 .d-bloc .navbar-toggle .icon-bar {
     background: rgba(255, 255, 255, 1);
+}
+
+.navbar-toggle:hover .icon-bar {
+    background: #F3976C !important;
 }
 
 .d-bloc .btn-wire,
@@ -284,7 +302,9 @@ a:hover {
 }
 
 #bloc-1-hero h1 {
-    font-size: 32px;
+    font-size: 28px;
+    color: white !important;
+    line-height: 42px;
 }
 
 .navbar {
@@ -438,6 +458,7 @@ nav .caret {
 .mg-md {
     margin-top: 10px;
     margin-bottom: 20px;
+    font-size: 18px;
 }
 
 .mg-lg {
@@ -508,6 +529,7 @@ button {
 .form-control {
     border-color: rgba(0, 0, 0, .1);
     box-shadow: none;
+    border-width: 2px;
 }
 
 .scrollToTop {
@@ -677,12 +699,15 @@ a {
 }
 
 p {
-    font-size: 11px;
+    font-size: 16px;
+    line-height: 26px;
 }
 
 .tight-width-whitespace {
     max-width: 600px;
     margin: auto auto auto auto;
+    position: relative;
+    z-index: 1;
 }
 
 .h1 {
@@ -706,7 +731,23 @@ p {
 
 h2 {
     font-size: 22px;
-    line-height: 1.4em;
+    line-height: 1.8em;
+    font-weight: 600;
+}
+
+.quote {
+    display: block;
+    margin: auto;
+    quotes: none;
+    font-size: 20px;
+    font-style: italic;
+    width: 85%;
+    color: #313030;
+}
+
+cite {
+    font-style: normal;
+    font-size: initial;
 }
 
 h3 {
@@ -753,8 +794,13 @@ h4 {
 }
 
 .black-background {
-    background-color: rgba(165, 147, 99, 0.7);
-    padding: 40px 40px 40px 40px;
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 40px;
+}
+
+.black-background h2{
+    font-size: 30px;
+    margin-bottom: 40px;
 }
 
 .bold-link {
@@ -813,12 +859,18 @@ h4 {
     background-image: url("img/dots-bg.png");
 }
 
-.bg-lines-h2-bg {
-    background-image: url("img/lines-h2-bg.png");
-}
-
 .bg-banniere {
     background-image: url("img/agence-la-panthere.jpg");
+}
+
+.bg-banniere:after, .texture-paper:after{
+    content: '';
+    background-color: rgba(0,0,0, .3);
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
 }
 
 .bg-presentation {
