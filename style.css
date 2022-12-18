@@ -470,6 +470,11 @@ nav .caret {
     font-size: 18px;
 }
 
+.container p.mg-lg{
+    font-weight: bold;
+    margin-top: 20px;
+}
+
 .mg-lg {
     margin-top: 10px;
     margin-bottom: 40px;
